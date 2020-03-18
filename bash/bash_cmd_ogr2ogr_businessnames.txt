@@ -1,0 +1,1 @@
+$ ogr2ogr -f "PostgreSQL" PG:"host=localhost port=5432 dbname=utkthesis user=alexadmin password=alexadmin ACTIVE_SCHEMA=businessnaming" Data/ESRI_Business_Data_Extract/BA_US_Businesses.gdb -overwrite -nlt PROMOTE_TO_MULTI -nln esri_businesses_usa_2018 -lco GEOMETRY_NAME=geom -a_srs EPSG:4326 -t_srs EPSG:4326

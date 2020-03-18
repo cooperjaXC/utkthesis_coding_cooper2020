@@ -1,0 +1,1 @@
+FOR /D /R %g IN "C:\Users\acc-s\Documents\GIS\ArcGIS\Data\forpsql_usaadminareas.gdb" DO ogr2ogr -f "PostgreSQL" PG:"host=localhost user=alexadmin dbname=utkthesis password=alexadmin ACTIVE_SCHEMA=adminareas" "C:\Users\acc-s\Documents\GIS\ArcGIS\Data\forpsql_usaadminareas.gdb" -overwrite -nlt PROMOTE_TO_MULTI -lco GEOMETRY_NAME=geom -a_srs EPSG:4326 -t_srs EPSG:4326

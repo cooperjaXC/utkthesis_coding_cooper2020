@@ -35,6 +35,12 @@ def citycalc(dlayer, slayer, alayer):
 
             # Clean Southern businesses for southern city or state businesses (ex: southern new york)
             ecsit = False
+
+            #NOTE: TO DO: should this cleaning step search for collapsed names? ie collapse space btwn New and York
+            #->   So you have newyork so if there is a SOUTHERN NEWYORK businesss it gets caught?
+
+            #NOTE: TO DO: How about scounty as a cleaning var? you could get the county name by spatial intersect
+
             if layer == slayer:
                 scity = sthn + " " + city
                 sstate = sthn + " " + state
@@ -44,6 +50,7 @@ def citycalc(dlayer, slayer, alayer):
                 # for itemmm in cursortests:
                     # newitemm = itemmm.replace(" ", "")
                     # cursortests.append(newitemm)
+
                 # If the business has these in them, exit. Else, continue on
                 for newitemm in cursortests:
                     if newitemm in busname:
